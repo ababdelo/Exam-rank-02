@@ -6,7 +6,7 @@
 /*   By: ababdelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 14:58:51 by ababdelo          #+#    #+#             */
-/*   Updated: 2023/08/03 16:37:24 by ababdelo         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:44:31 by ababdelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,21 @@ int main (int ac, char **av)
 /*
 int main(int ac, char **av)
 {
-	int index= strlen(av[1]),index3 =index;
-	int valid = 0;
-	while(--index >= 0)
+	if (ac == 2)
 	{
-		if(av[1][index] != ' ' && av[1][index] != '\t')
-			valid = 1;
-		if(valid && av[1][index] == ' ')
-			break;
+		int index= strlen(av[1]),index3 =index;
+		int valid = 0;
+		while(--index >= 0)
+		{
+			if(av[1][index] != ' ' && av[1][index] != '\t')
+				valid = 1;
+			if(valid && av[1][index] == ' ')
+				break;
+		}
+		while(++index < index3)
+			if(av[1][index] != ' ' && av[1][index] != '\t')
+				write(1,&av[1][index],1);
 	}
-	while(++index < index3)
-		if(av[1][index] != ' ' && av[1][index] != '\t')
-			write(1,&av[1][index],1);
 	write(1,"\n",1);
 }
 */
